@@ -138,6 +138,76 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-Latex-Vscode" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/04/04/Latex-Vscode/">Latex&amp;Vscode</a>
+    </h1>
+  
+
+        
+        <a href="/2019/04/04/Latex-Vscode/" class="archive-article-date">
+  	<time datetime="2019-04-04T09:08:03.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-04-04</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="Win10环境下Latex-Vscode-搭配安装配置"><a href="#Win10环境下Latex-Vscode-搭配安装配置" class="headerlink" title="Win10环境下Latex Vscode 搭配安装配置"></a>Win10环境下Latex Vscode 搭配安装配置</h1><h2 id="安装Latex"><a href="#安装Latex" class="headerlink" title="安装Latex"></a>安装Latex</h2><p>下载实验室服务器镜像，挂载后运行install-tl-advanced.bat<br>可以自行更改配置，推荐关闭安全软件并以管理员身份运行</p>
+<h2 id="安装-Vscode"><a href="#安装-Vscode" class="headerlink" title="安装 Vscode"></a>安装 Vscode</h2><p>从Microsoft官网下载VS Code安装包进行安装。</p>
+<h2 id="安装latex-workshop-插件配置"><a href="#安装latex-workshop-插件配置" class="headerlink" title="安装latex workshop 插件配置"></a>安装latex workshop 插件配置</h2><ol>
+<li>在vs code中下载latex workshop插件进行安装</li>
+<li>打开首选项，在个人配置中加入如下代码<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div></pre></td><td class="code"><pre><div class="line">&quot;latex-workshop.latex.recipes&quot;: [</div><div class="line">    &#123;</div><div class="line">      &quot;name&quot;: &quot;xelatex&quot;,</div><div class="line">      &quot;tools&quot;: [</div><div class="line">        &quot;xelatex&quot;</div><div class="line">      ]</div><div class="line">    &#125;,</div><div class="line">    &#123;</div><div class="line">      &quot;name&quot;: &quot;xelatex -&gt; bibtex -&gt; xelatex*2&quot;,</div><div class="line">      &quot;tools&quot;: [</div><div class="line">        &quot;xelatex&quot;,</div><div class="line">        &quot;bibtex&quot;,</div><div class="line">        &quot;xelatex&quot;,</div><div class="line">        &quot;xelatex&quot;</div><div class="line">      ]</div><div class="line">    &#125;</div><div class="line">  ],</div><div class="line">  &quot;latex-workshop.latex.tools&quot;: [</div><div class="line">    &#123;</div><div class="line">      &quot;name&quot;: &quot;latexmk&quot;,</div><div class="line">      &quot;command&quot;: &quot;latexmk&quot;,</div><div class="line">      &quot;args&quot;: [</div><div class="line">        &quot;-synctex=1&quot;,</div><div class="line">        &quot;-interaction=nonstopmode&quot;,</div><div class="line">        &quot;-file-line-error&quot;,</div><div class="line">        &quot;-pdf&quot;,</div><div class="line">        &quot;%DOC%&quot;</div><div class="line">      ]</div><div class="line">    &#125;,</div><div class="line">    &#123;</div><div class="line">      &quot;name&quot;: &quot;xelatex&quot;,</div><div class="line">      &quot;command&quot;: &quot;xelatex&quot;,</div><div class="line">      &quot;args&quot;: [</div><div class="line">        &quot;-synctex=1&quot;,</div><div class="line">        &quot;-interaction=nonstopmode&quot;,</div><div class="line">        &quot;-file-line-error&quot;,</div><div class="line">        &quot;%DOC%&quot;</div><div class="line">      ]</div><div class="line">    &#125;,</div><div class="line">    &#123;</div><div class="line">      &quot;name&quot;: &quot;bibtex&quot;,</div><div class="line">      &quot;command&quot;: &quot;bibtex&quot;,</div><div class="line">      &quot;args&quot;: [</div><div class="line">        &quot;%DOCFILE%&quot;</div><div class="line">      ]</div><div class="line">    &#125;</div><div class="line">  ],</div><div class="line">  &quot;latex-preview.command&quot;: &quot;xelatex&quot;,</div><div class="line">  &quot;latex-workshop.view.pdf.viewer&quot;: &quot;tab&quot;</div></pre></td></tr></table></figure>
+</li>
+</ol>
+<h2 id="安装完成"><a href="#安装完成" class="headerlink" title="安装完成"></a>安装完成</h2><p>Enjoy</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/04/04/Latex-Vscode/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-3d lab recruiting new" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -336,7 +406,8 @@
 <h2 id="Exercise-2-27"><a href="#Exercise-2-27" class="headerlink" title="Exercise 2.27"></a>Exercise 2.27</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">(a) int i = -1, &amp;r = 0;        //illegal , r must refer to an object.</div><div class="line">(b) int *const p2 = &amp;i2;       //legal.</div><div class="line">(c) const int i = -1, &amp;r = 0;  //legal 允许一个常量引用绑定非常量对象，字面值，甚至是一个表达式</div><div class="line">(d) const int *const p3 = &amp;i2; //legal</div><div class="line">(e) const int *p1 = &amp;ie        //legal</div><div class="line">(f) const int &amp;const r2;       //illegal, r2 is a reference that cannot be const.</div><div class="line">(g) const int i2 = i, &amp;r = i;  //legal</div></pre></td></tr></table></figure>
 <h2 id="Exercise-2-28"><a href="#Exercise-2-28" class="headerlink" title="Exercise 2.28"></a>Exercise 2.28</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">(a) int i, *const cp;      //illegal, cp must be initalize.</div><div class="line">(b) int *p1, *const p2;    //illegal, p2 must be initalize.</div><div class="line">(c) const int ic, &amp;r = ic  //illegal, ic must be initalize.</div><div class="line">(d) const int * const p3;  //illegal, p3 must be initalize.</div><div class="line">(e) const int *p;          //illegal, a pointer to const int, it should be double.</div></pre></td></tr></table></figure>
 <h2 id="Exercise-2-29"><a href="#Exercise-2-29" class="headerlink" title="Exercise 2.29"></a>Exercise 2.29</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">(a) i = ic;           //legal</div><div class="line">(b) p1 p3;            //illegal, p3 is a const pointer to const int.</div><div class="line">(c) p1 = &amp;ic;         //illegal, ic is a const int.</div><div class="line">(d) p3 = &amp;ic;         //illegal, p3 is a const pointer.</div><div class="line">(e) p2 = p1;          //illegal, p2 is a const inter.</div></pre></td></tr></table></figure>
-<h2 id="Exercise-2-30"><a href="#Exercise-2-30" class="headerlink" title="Exercise 2.30"></a>Exercise 2.30</h2>
+<h2 id="Exercise-2-30"><a href="#Exercise-2-30" class="headerlink" title="Exercise 2.30"></a>Exercise 2.30</h2><p>```</p>
+
       
 
       
@@ -450,7 +521,7 @@
   <div class="outer">
     <div id="footer-info">
     	<div class="footer-left">
-    		&copy; 2018 jomain
+    		&copy; 2019 jomain
     	</div>
       	<div class="footer-right">
       		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten

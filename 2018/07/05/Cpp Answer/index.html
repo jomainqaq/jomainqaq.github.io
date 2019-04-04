@@ -26,7 +26,7 @@ chapter01.Getting Started
 
 chapter02:Variables and Basic Types
 Exercise 2.1123short and int  is at least 16 bits, long at least 3">
-<meta property="og:updated_time" content="2018-09-21T12:23:05.821Z">
+<meta property="og:updated_time" content="2018-12-21T08:06:27.308Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Cpp Answer">
 <meta name="twitter:description" content="C++ Primer Answer Jmain  2018.07.04
@@ -219,7 +219,8 @@ Exercise 2.1123short and int  is at least 16 bits, long at least 3">
 <h2 id="Exercise-2-27"><a href="#Exercise-2-27" class="headerlink" title="Exercise 2.27"></a>Exercise 2.27</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">(a) int i = -1, &amp;r = 0;        //illegal , r must refer to an object.</div><div class="line">(b) int *const p2 = &amp;i2;       //legal.</div><div class="line">(c) const int i = -1, &amp;r = 0;  //legal 允许一个常量引用绑定非常量对象，字面值，甚至是一个表达式</div><div class="line">(d) const int *const p3 = &amp;i2; //legal</div><div class="line">(e) const int *p1 = &amp;ie        //legal</div><div class="line">(f) const int &amp;const r2;       //illegal, r2 is a reference that cannot be const.</div><div class="line">(g) const int i2 = i, &amp;r = i;  //legal</div></pre></td></tr></table></figure>
 <h2 id="Exercise-2-28"><a href="#Exercise-2-28" class="headerlink" title="Exercise 2.28"></a>Exercise 2.28</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">(a) int i, *const cp;      //illegal, cp must be initalize.</div><div class="line">(b) int *p1, *const p2;    //illegal, p2 must be initalize.</div><div class="line">(c) const int ic, &amp;r = ic  //illegal, ic must be initalize.</div><div class="line">(d) const int * const p3;  //illegal, p3 must be initalize.</div><div class="line">(e) const int *p;          //illegal, a pointer to const int, it should be double.</div></pre></td></tr></table></figure>
 <h2 id="Exercise-2-29"><a href="#Exercise-2-29" class="headerlink" title="Exercise 2.29"></a>Exercise 2.29</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">(a) i = ic;           //legal</div><div class="line">(b) p1 p3;            //illegal, p3 is a const pointer to const int.</div><div class="line">(c) p1 = &amp;ic;         //illegal, ic is a const int.</div><div class="line">(d) p3 = &amp;ic;         //illegal, p3 is a const pointer.</div><div class="line">(e) p2 = p1;          //illegal, p2 is a const inter.</div></pre></td></tr></table></figure>
-<h2 id="Exercise-2-30"><a href="#Exercise-2-30" class="headerlink" title="Exercise 2.30"></a>Exercise 2.30</h2>
+<h2 id="Exercise-2-30"><a href="#Exercise-2-30" class="headerlink" title="Exercise 2.30"></a>Exercise 2.30</h2><p>```</p>
+
       
 
       
@@ -345,7 +346,7 @@ Exercise 2.1123short and int  is at least 16 bits, long at least 3">
   <div class="outer">
     <div id="footer-info">
     	<div class="footer-left">
-    		&copy; 2018 jomain
+    		&copy; 2019 jomain
     	</div>
       	<div class="footer-right">
       		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
