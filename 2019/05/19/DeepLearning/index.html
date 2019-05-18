@@ -6,17 +6,21 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="jomainqaq.github.io">
-  <title>Archives: 2018/9 | 是风动</title>
+  <title>DeepLearning | 是风动</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="pilipalapeng">
-<meta property="og:type" content="website">
-<meta property="og:title" content="是风动">
-<meta property="og:url" content="jomainqaq.github.io/archives/2018/09/index.html">
+  <meta name="description" content="Logistic Regression with a Neural Network mindsetLogistic 回归
+IntroductionLogistic 回归是一种用于解决监督学习（Supervised Learning）问题的学习算法，其输出y的值为0或1。Logistic回归的目的是使训练数据与其预测值之间的误差最小化。下面以Cat vs No-cat为例： 给定以一个nx维特征向量">
+<meta property="og:type" content="article">
+<meta property="og:title" content="DeepLearning">
+<meta property="og:url" content="jomainqaq.github.io/2019/05/19/DeepLearning/index.html">
 <meta property="og:site_name" content="是风动">
-<meta property="og:description" content="pilipalapeng">
+<meta property="og:description" content="Logistic Regression with a Neural Network mindsetLogistic 回归
+IntroductionLogistic 回归是一种用于解决监督学习（Supervised Learning）问题的学习算法，其输出y的值为0或1。Logistic回归的目的是使训练数据与其预测值之间的误差最小化。下面以Cat vs No-cat为例： 给定以一个nx维特征向量">
+<meta property="og:updated_time" content="2019-05-18T23:31:35.339Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="是风动">
-<meta name="twitter:description" content="pilipalapeng">
+<meta name="twitter:title" content="DeepLearning">
+<meta name="twitter:description" content="Logistic Regression with a Neural Network mindsetLogistic 回归
+IntroductionLogistic 回归是一种用于解决监督学习（Supervised Learning）问题的学习算法，其输出y的值为0或1。Logistic回归的目的是使训练数据与其预测值之间的误差最小化。下面以Cat vs No-cat为例： 给定以一个nx维特征向量">
   
     <link rel="alternative" href="/atom.xml" title="是风动" type="application/atom+xml">
   
@@ -136,49 +140,144 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-DeepLearning" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2018" class="archive-year">2018</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/09/25/HDU Online Judge System/" class="archive-article-date">
-  	<time datetime="2018-09-25T13:43:22.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-09-25</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/09/25/HDU Online Judge System/">HDU Online Judge System</a>
+    <h1 class="article-title" itemprop="name">
+      DeepLearning
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
+        
+        <a href="/2019/05/19/DeepLearning/" class="archive-article-date">
+  	<time datetime="2019-05-18T23:02:38.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-05-19</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="Logistic-Regression-with-a-Neural-Network-mindset"><a href="#Logistic-Regression-with-a-Neural-Network-mindset" class="headerlink" title="Logistic Regression with a Neural Network mindset"></a>Logistic Regression with a Neural Network mindset</h1><h2 id="Logistic-回归"><a href="#Logistic-回归" class="headerlink" title="Logistic 回归"></a>Logistic 回归</h2><hr>
+<h3 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h3><p>Logistic 回归是一种用于解决监督学习（Supervised Learning）问题的学习算法，其输出y的值为0或1。Logistic回归的目的是使训练数据与其预测值之间的误差最小化。<br>下面以Cat vs No-cat为例： 给定以一个nx维特征向量x表示的一张图片，这个算法将估计这张图中存在一只猫的概率，即y=1的概率：<br>给定 x,计算y^=P(y=1|x),且 0≤y^≤1我们希望能有一个函数，能够表示出y^，如果进行最简单的线性拟合的话，规定一个nx维向量和一个值b作为参数，可得到： </p>
+<blockquote>
+<p>  $\tilde{y}=\omega ^{T}X+b$    </p>
+</blockquote>
+<p>因为y^是一个概率值，取值范围位[0,1]，简单的线性拟合不能符合要求，我们使用sigmoid函数进行拟合<br>表达式为：</p>
+<blockquote>
+<p>  $\sigma (Z)=\frac{1}{1+e^{-z}}$  </p>
+</blockquote>
 
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http:jomainqaq.github.io/2019/05/19/DeepLearning/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
   
   
-    </div></section>
+    <a href="/2019/05/13/UsefulCode/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">UsefulCode</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+  
+  
   
 
-    
+  
+
+  
+
+  
 
 
           </div>
@@ -201,8 +300,8 @@
 	var yiliaConfig = {
 		mathjax: true,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
