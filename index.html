@@ -79,6 +79,8 @@
 				
 					<a class="github" target="_blank" href="https://github.com/jomainqaq" title="github"><i class="icon-github"></i></a>
 		        
+					<a class="mail" target="_blank" href="/lmyundo@gmail.com" title="mail"><i class="icon-mail"></i></a>
+		        
 			</div>
 		</nav>
 	</header>		
@@ -113,6 +115,8 @@
 				<div class="social">
 					
 						<a class="github" target="_blank" href="https://github.com/jomainqaq" title="github"><i class="icon-github"></i></a>
+			        
+						<a class="mail" target="_blank" href="/lmyundo@gmail.com" title="mail"><i class="icon-mail"></i></a>
 			        
 				</div>
 			</nav>
@@ -166,7 +170,16 @@
 <blockquote>
 <p>  $\sigma (Z)=\frac{1}{1+e^{-z}}$  </p>
 </blockquote>
-<p><img src="/19/DeepLearning-AI/sigmoid.png" alt="avatar"></p>
+<p><img src="http://123.206.189.54/HexoImages/sigmoid.png" alt="sig函数图像"><br>由函数图像可知，sigmoid函数有几个很好的性质： </p>
+<ul>
+<li>当z趋近于正无穷大时，σ(z) = 1 </li>
+<li>当z趋近于负无穷大时，σ(z) = 0 </li>
+<li>当z = 0时，σ(z) = 0.5 </li>
+</ul>
+<p>所以可以用sigmoid函数来约束y^的值域，此时：</p>
+<blockquote>
+<p>  $\hat{y}^{(i)}=\sigma (w^TX^{(i)}+b),where \quad\sigma(z^{(i)})=\frac{1}{1+e^{-z^{(i)}}}$   </p>
+</blockquote>
 
       
 
@@ -180,78 +193,6 @@
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2019/05/19/DeepLearning-AI/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-DeepLearning" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/05/19/DeepLearning/">DeepLearning</a>
-    </h1>
-  
-
-        
-        <a href="/2019/05/19/DeepLearning/" class="archive-article-date">
-  	<time datetime="2019-05-18T23:02:38.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-05-19</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="Logistic-Regression-with-a-Neural-Network-mindset"><a href="#Logistic-Regression-with-a-Neural-Network-mindset" class="headerlink" title="Logistic Regression with a Neural Network mindset"></a>Logistic Regression with a Neural Network mindset</h1><h2 id="Logistic-回归"><a href="#Logistic-回归" class="headerlink" title="Logistic 回归"></a>Logistic 回归</h2><hr>
-<h3 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h3><p>Logistic 回归是一种用于解决监督学习（Supervised Learning）问题的学习算法，其输出y的值为0或1。Logistic回归的目的是使训练数据与其预测值之间的误差最小化。<br>下面以Cat vs No-cat为例： 给定以一个nx维特征向量x表示的一张图片，这个算法将估计这张图中存在一只猫的概率，即y=1的概率：<br>给定 x,计算y^=P(y=1|x),且 0≤y^≤1我们希望能有一个函数，能够表示出y^，如果进行最简单的线性拟合的话，规定一个nx维向量和一个值b作为参数，可得到： </p>
-<blockquote>
-<p>  $\tilde{y}=\omega ^{T}X+b$    </p>
-</blockquote>
-<p>因为y^是一个概率值，取值范围位[0,1]，简单的线性拟合不能符合要求，我们使用sigmoid函数进行拟合<br>表达式为：</p>
-<blockquote>
-<p>  $\sigma (Z)=\frac{1}{1+e^{-z}}$  </p>
-</blockquote>
-<p><img src="/19/DeepLearning/images/sigmoid.png" alt="avatar"></p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/05/19/DeepLearning/">展开全文 >></a>
         </p>
       
 

@@ -14,12 +14,12 @@
 <meta property="og:url" content="jomainqaq.github.io/2019/05/19/DeepLearning-AI/index.html">
 <meta property="og:site_name" content="是风动">
 <meta property="og:description" content="IntroductionLogistic 回归是一种用于解决监督学习（Supervised Learning）问题的学习算法，其输出y的值为0或1。Logistic回归的目的是使训练数据与其预测值之间的误差最小化。下面以Cat vs No-cat为例： 给定以一个nx维特征向量x表示的一张图片，这个算法将估计这张图中存在一只猫的概率，即y=1的概率：给定 x,计算y^=P(y=1|x),且 0≤y">
-<meta property="og:image" content="jomainqaq.github.io/19/DeepLearning-AI/sigmoid.png">
-<meta property="og:updated_time" content="2019-05-18T23:48:53.736Z">
+<meta property="og:image" content="http://123.206.189.54/HexoImages/sigmoid.png">
+<meta property="og:updated_time" content="2019-05-19T00:15:36.648Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="DeepLearning.AI">
 <meta name="twitter:description" content="IntroductionLogistic 回归是一种用于解决监督学习（Supervised Learning）问题的学习算法，其输出y的值为0或1。Logistic回归的目的是使训练数据与其预测值之间的误差最小化。下面以Cat vs No-cat为例： 给定以一个nx维特征向量x表示的一张图片，这个算法将估计这张图中存在一只猫的概率，即y=1的概率：给定 x,计算y^=P(y=1|x),且 0≤y">
-<meta name="twitter:image" content="jomainqaq.github.io/19/DeepLearning-AI/sigmoid.png">
+<meta name="twitter:image" content="http://123.206.189.54/HexoImages/sigmoid.png">
   
     <link rel="alternative" href="/atom.xml" title="是风动" type="application/atom+xml">
   
@@ -82,6 +82,8 @@
 				
 					<a class="github" target="_blank" href="https://github.com/jomainqaq" title="github"><i class="icon-github"></i></a>
 		        
+					<a class="mail" target="_blank" href="/lmyundo@gmail.com" title="mail"><i class="icon-mail"></i></a>
+		        
 			</div>
 		</nav>
 	</header>		
@@ -116,6 +118,8 @@
 				<div class="social">
 					
 						<a class="github" target="_blank" href="https://github.com/jomainqaq" title="github"><i class="icon-github"></i></a>
+			        
+						<a class="mail" target="_blank" href="/lmyundo@gmail.com" title="mail"><i class="icon-mail"></i></a>
 			        
 				</div>
 			</nav>
@@ -167,7 +171,16 @@
 <blockquote>
 <p>  $\sigma (Z)=\frac{1}{1+e^{-z}}$  </p>
 </blockquote>
-<p><img src="/19/DeepLearning-AI/sigmoid.png" alt="avatar"></p>
+<p><img src="http://123.206.189.54/HexoImages/sigmoid.png" alt="sig函数图像"><br>由函数图像可知，sigmoid函数有几个很好的性质： </p>
+<ul>
+<li>当z趋近于正无穷大时，σ(z) = 1 </li>
+<li>当z趋近于负无穷大时，σ(z) = 0 </li>
+<li>当z = 0时，σ(z) = 0.5 </li>
+</ul>
+<p>所以可以用sigmoid函数来约束y^的值域，此时：</p>
+<blockquote>
+<p>  $\hat{y}^{(i)}=\sigma (w^TX^{(i)}+b),where \quad\sigma(z^{(i)})=\frac{1}{1+e^{-z^{(i)}}}$   </p>
+</blockquote>
 
       
 
@@ -241,8 +254,8 @@
 <nav id="article-nav">
   
   
-    <a href="/2019/05/19/DeepLearning/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">DeepLearning</div>
+    <a href="/2019/05/13/UsefulCode/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">UsefulCode</div>
       <i class="icon-circle-right"></i>
     </a>
   
